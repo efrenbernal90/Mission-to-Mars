@@ -11,7 +11,7 @@ def scrape_all():
     browser = Browser('chrome', **executable_path, headless=False)
     # Set variables to be pulling data from function
     news_title, news_paragraph = mars_news(browser)
-    hemisphere_img_url = mars_hemisphere(browser)
+    # hemisphere_image_urls = mars_hemisphere(browser)
 
     # Run all scraping functions and store results in a dictionary
     data = {
