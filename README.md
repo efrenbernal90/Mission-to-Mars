@@ -28,6 +28,7 @@ Additional Documentation:
 ## Results
 ### The app contains a summary and title of the latest news, scrapped from redplanetscience.com. The following script was used:
 
+```Python
     def mars_news(browser):
       # Visit the mars nasa news site
       url = 'https://redplanetscience.com'
@@ -53,9 +54,11 @@ Additional Documentation:
           return None, None
 
       return news_title, news_p
+```
 
 ### The image was added by scrapping spaceimages-mars.com using
-     
+
+```Python
      def featured_image(browser):
         # Visit URL
         url = 'https://spaceimages-mars.com'
@@ -81,9 +84,11 @@ Additional Documentation:
         img_url = f'https://spaceimages-mars.com/{img_url_rel}'
 
         return img_url
-             
+```
+
 ### The facts table was scrapped from galaxyfacts-mars.com using
 
+```Python
       def mars_facts():
     # Add try/except for error handling
     try:
@@ -99,9 +104,10 @@ Additional Documentation:
 
     # Convert dataframe into HTML format, add bootstrap
     return df.to_html()
-    
-### Finally, the hemispheres were added by scrapping marshemispheres.com/ using
+```
 
+### Finally, the hemispheres were added by scrapping marshemispheres.com/ using
+```Python
     def mars_hemisphere(browser):
     # 1. Visit url
     url = 'https://marshemispheres.com/'
@@ -137,7 +143,8 @@ Additional Documentation:
         return None
 
     return hemisphere_image_urls
-    
+```
+
 ### The data was uploaded into flask-Pymongo [See app.py](app.py)
 
 ### A sample of the website (note that Bootstrap was used to make hemisphere images into thumbnails and split into a row of four images:
